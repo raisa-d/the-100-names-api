@@ -1,5 +1,5 @@
 # The 100 Names API
-This API provides birth names, clan affiliations, and nicknames of characters from the 100!
+This API provides birth names, clan affiliations, and nicknames of characters from The 100 TV Show!
 
 ## Table of Contents
 - [Features](#features)
@@ -16,12 +16,11 @@ If you want to make a request to the API, read [How To Use](#how-to-use)
 
 ## How To Use
 ***Search character by name***
-Make sure to use the character's first name only.
-
-Endpoint: /api/<character-first-name>
+<p>Make sure to use the character's first name only.</p>
+<p>Endpoint: /api/<character-first-name></p>
 
 ***List all characters' data***
-Endpoint: /api
+<p>Endpoint: /api</p>
 
 ## How to Start The Server Locally
 - Run npm install to install the dependencies

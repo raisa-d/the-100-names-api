@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const PORT = 8000;
+
+app.use(cors());
 
 const characters = {
     'clarke': {
@@ -36,7 +39,7 @@ const characters = {
         'clanAffiliation': ['Skaikru', 'Spacekru', 'Finalkru'],
         'nicknames': ['Murphy', 'Fleimkepa', 'Cockroach']
     }
-}
+};
 
 app.get('/', (req, res) => {
     res.sendFile(`${__dirname}/index.html`);
@@ -55,6 +58,6 @@ app.get('/api/:name', (req, res) => {
     };
 })
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`The server is running on port ${PORT}, better go catch it!`);
 });
