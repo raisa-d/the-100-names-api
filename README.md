@@ -23,7 +23,7 @@ This API provides **birth names**, **clan affiliations**, and **aliases** of cha
 
 ## **How To Use**
 ***Search character by name***
-- **Endpoint**: /api/:character-first-name
+- **Endpoint**: https://the-100-names-api.onrender.com/api/:character-first-name
     - Replace `:character-first-name` with the first name of the character.
     - Example:
     To get data for Clarke Griffin, make a request to: /api/clarke
@@ -34,10 +34,12 @@ This API provides **birth names**, **clan affiliations**, and **aliases** of cha
   "message": "We couldn't find that character in our system."
 }
 
-
 ***List all characters***
-- **Endpoint**: /api
+- **Endpoint**: https://the-100-names-api.onrender.com/api
 - Use this endpoint to retrieve the entire list of characters available in the database, along with their full details.
+
+## **Important Note**
+The API is currently hosted using the free tier of Render and will spin down after 15 minutes of inactivity. If it is not working, start the server locally to use it! If you really want to use it for an app that will be longstanding, [contact me](#contact) and I will host it elsewhere so that it can remain active indefinitely!
 
 ---
 
@@ -70,7 +72,7 @@ npm start
 ## Lessons Learned
 - Properly structured documentation ensures smooth usage by others. This is one I learned on the client-side consuming APIs written by other people, so I made sure to be as clear as possible in this documentation.
 - Using CORS is essential for preventing client-side issues when making requests to your API.
-- This is my first time hosting an API, so I am learning how to use either Render or Vercel.
+- How to deploy using render. It was very easy and streamlined to deploy directly from my Git repository on GitHub.
 
 ---
 
