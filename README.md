@@ -1,7 +1,7 @@
-# The 100 Names API
-This API provides birth names, clan affiliations, and nicknames of characters from The 100 TV Show!
+# **The 100 Names API**
+This API provides **birth names**, **clan affiliations**, and **aliases** of characters from The 100 TV Show!
 
-## Table of Contents
+## **Table of Contents**
 - [Features](#features)
 - [How To Use](#how-to-use)
 - [How To Start Server Locally](#how-to-start-the-server-locally)
@@ -10,31 +10,69 @@ This API provides birth names, clan affiliations, and nicknames of characters fr
 - [Lessons Learned](#lessons-learned)
 - [Contact](#contact)
 
+---
+
 ## Features
-This API provides birth names, clan affiliations, and nicknames of characters from the 100! 
-If you want to make a request to the API, read [How To Use](#how-to-use)
+- Access data about character from ***The 100***, including:
+    - Full name
+    - Clan affiliations
+    - Aliases/nicknames
+- Supports **search by character name** and **fetching all characters' data** at once.
 
-## How To Use
+---
+
+## **How To Use**
 ***Search character by name***
-<p>Make sure to use the character's first name only.</p>
-<p>Endpoint: /api/<character-first-name></p>
+- **Endpoint**: /api/:character-first-name
+    - Replace `:character-first-name` with the first name of the character.
+    - Example:
+    To get data for Clarke Griffin, make a request to: /api/clarke
 
-***List all characters' data***
-<p>Endpoint: /api</p>
+- If the character exists, you’ll receive a JSON response with their details.  
+- If the character doesn't exist, you’ll receive a `404` response with a message:  
+{
+  "message": "We couldn't find that character in our system."
+}
+
+
+***List all characters***
+- **Endpoint**: /api
+- Use this endpoint to retrieve the entire list of characters available in the database, along with their full details.
+
+---
 
 ## How to Start The Server Locally
-- Run npm install to install the dependencies
-- Run npm start to start the server
+1. Clone the repository to your local machine:
+git clone <your-repo-url>
+cd <your-repo-folder>
+2. Install dependencies:
+npm install
+3. Start the server:
+npm start
+4. Visit the following URL to confirm the server is running: http://localhost:8000/
+
+---
 
 ## Technologies Used
-Node.js, Express
+- Node.js for server-side JavaScript
+- Express to simplify API creation
+- CORS to enable cross-origin resource sharing for client-side usage
+
+---
 
 ## Optimizations
-- Add the rest of the characters
-- Add images of each character
+- Add more characters from ***The 100*** for a more comprehensive database
+- Attach images of characters to their data.
+- Implement search by aliases (e.g., allow /api/wanheda to return Clarke's data).
+
+---
 
 ## Lessons Learned
+- Properly structured documentation ensures smooth usage by others. This is one I learned on the client-side consuming APIs written by other people, so I made sure to be as clear as possible in this documentation.
+- Using CORS is essential for preventing client-side issues when making requests to your API.
 - This is my first time hosting an API, so I am learning how to use either Render or Vercel.
+
+---
 
 ## Contact
 <p> 
